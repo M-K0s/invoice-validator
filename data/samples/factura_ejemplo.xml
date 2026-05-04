@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:sovos:invoice:1.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         version="1.0">
+
+  <InvoiceHeader>
+    <InvoiceID>INV-2024-021</InvoiceID>
+    <InvoiceType>FACTURA-A</InvoiceType>
+    <IssueDate>2024-02-22</IssueDate>
+    <DueDate>2024-03-22</DueDate>
+    <Currency>ARS</Currency>
+    <Status>issued</Status>
+  </InvoiceHeader>
+
+  <Vendor>
+    <VendorID>VND-001</VendorID>
+    <Name>Acme Supplies SA</Name>
+    <TaxID>30-12345678-9</TaxID>
+    <TaxCategory>RESPONSABLE_INSCRIPTO</TaxCategory>
+    <Address>
+      <Street>Av. Corrientes 1234</Street>
+      <City>Buenos Aires</City>
+      <Province>CABA</Province>
+      <PostalCode>C1043</PostalCode>
+      <Country>AR</Country>
+    </Address>
+  </Vendor>
+
+  <Customer>
+    <CustomerID>CUS-101</CustomerID>
+    <Name>TechCorp Argentina SRL</Name>
+    <TaxID>20-12345678-9</TaxID>
+    <TaxCategory>RESPONSABLE_INSCRIPTO</TaxCategory>
+    <Address>
+      <Street>San Martín 567</Street>
+      <City>San Miguel de Tucumán</City>
+      <Province>Tucumán</Province>
+      <PostalCode>T4000</PostalCode>
+      <Country>AR</Country>
+    </Address>
+  </Customer>
+
+  <LineItems>
+    <LineItem lineNumber="1">
+      <Description>Componentes electrónicos - Lote A</Description>
+      <ProductCode>PROD-001</ProductCode>
+      <Quantity>50</Quantity>
+      <UnitOfMeasure>UN</UnitOfMeasure>
+      <UnitPrice>1200.00</UnitPrice>
+      <Subtotal>60000.00</Subtotal>
+      <TaxRate>21</TaxRate>
+      <TaxAmount>12600.00</TaxAmount>
+      <LineTotal>72600.00</LineTotal>
+    </LineItem>
+    <LineItem lineNumber="2">
+      <Description>Servicio de instalación y configuración</Description>
+      <ProductCode>SVC-010</ProductCode>
+      <Quantity>8</Quantity>
+      <UnitOfMeasure>HS</UnitOfMeasure>
+      <UnitPrice>5000.00</UnitPrice>
+      <Subtotal>40000.00</Subtotal>
+      <TaxRate>21</TaxRate>
+      <TaxAmount>8400.00</TaxAmount>
+      <LineTotal>48400.00</LineTotal>
+    </LineItem>
+    <LineItem lineNumber="3">
+      <Description>Soporte técnico anual</Description>
+      <ProductCode>SVC-020</ProductCode>
+      <Quantity>1</Quantity>
+      <UnitOfMeasure>UN</UnitOfMeasure>
+      <UnitPrice>15000.00</UnitPrice>
+      <Subtotal>15000.00</Subtotal>
+      <TaxRate>0</TaxRate>
+      <TaxAmount>0.00</TaxAmount>
+      <LineTotal>15000.00</LineTotal>
+    </LineItem>
+  </LineItems>
+
+  <Totals>
+    <Subtotal>115000.00</Subtotal>
+    <TaxBase>100000.00</TaxBase>
+    <TotalTax>21000.00</TotalTax>
+    <Total>136000.00</Total>
+  </Totals>
+
+  <PaymentTerms>
+    <Method>TRANSFERENCIA_BANCARIA</Method>
+    <BankAccount>
+      <CBU>0000003100012345678900</CBU>
+      <Alias>ACME.PAGOS.AR</Alias>
+    </BankAccount>
+    <Notes>Pago dentro de los 30 días de la fecha de emisión.</Notes>
+  </PaymentTerms>
+
+</Invoice>
